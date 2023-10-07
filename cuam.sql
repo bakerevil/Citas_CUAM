@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-10-2023 a las 04:47:15
+-- Tiempo de generación: 07-10-2023 a las 06:35:38
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -24,99 +24,164 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `alumnos`
+-- Estructura de tabla para la tabla `casos`
 --
 
-CREATE TABLE `alumnos` (
-  `id` int(1) NOT NULL,
-  `nombre` varchar(60) NOT NULL,
-  `apellidos` varchar(60) NOT NULL,
-  `correo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `asunto`
---
-
-CREATE TABLE `asunto` (
-  `id` int(1) NOT NULL,
-  `prueba 1` varchar(40) NOT NULL,
-  `prueba 2` varchar(40) NOT NULL,
-  `prueba 3` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `profesores`
---
-
-CREATE TABLE `profesores` (
+CREATE TABLE `casos` (
   `id` int(11) NOT NULL,
-  `nombre` int(11) NOT NULL,
-  `apellido` int(11) NOT NULL,
-  `correo` int(11) NOT NULL,
-  `contraseña` int(11) NOT NULL,
-  `status` float NOT NULL
+  `caso` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `casos`
+--
+
+INSERT INTO `casos` (`id`, `caso`) VALUES
+(1, 'academico');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `status`
+-- Estructura de tabla para la tabla `cita`
 --
 
-CREATE TABLE `status` (
-  `id` int(1) NOT NULL,
-  `activo` float NOT NULL,
-  `inactivo` int(11) NOT NULL
+CREATE TABLE `cita` (
+  `id` int(11) NOT NULL,
+  `nombrePPS` varchar(255) NOT NULL,
+  `nombreALM` varchar(255) NOT NULL,
+  `caso` int(1) NOT NULL,
+  `modalidad` int(1) NOT NULL,
+  `horarios` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `cita`
+--
+
+INSERT INTO `cita` (`id`, `nombrePPS`, `nombreALM`, `caso`, `modalidad`, `horarios`) VALUES
+(1, 'juan aguirre mendoza', 'chalino sanchez sanchez', 1, 2, '2023-10-06 13:30:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `modo`
+--
+
+CREATE TABLE `modo` (
+  `id` int(11) NOT NULL,
+  `opciones` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `modo`
+--
+
+INSERT INTO `modo` (`id`, `opciones`) VALUES
+(1, 'virtual'),
+(2, 'presencial');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` int(1) NOT NULL,
+  `rol` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id`, `rol`) VALUES
+(1, 'administrador'),
+(2, 'usuario');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(80) NOT NULL,
+  `correo` varchar(80) NOT NULL,
+  `contraseña` varchar(15) NOT NULL,
+  `rol` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `contraseña`, `rol`) VALUES
+(0, 'leonardo', 'hola@hola.com', 'hola1', 1);
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `alumnos`
+-- Indices de la tabla `casos`
 --
-ALTER TABLE `alumnos`
+ALTER TABLE `casos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `asunto`
+-- Indices de la tabla `cita`
 --
-ALTER TABLE `asunto`
+ALTER TABLE `cita`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `status`
+-- Indices de la tabla `modo`
 --
-ALTER TABLE `status`
+ALTER TABLE `modo`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `correo` (`correo`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `alumnos`
+-- AUTO_INCREMENT de la tabla `casos`
 --
-ALTER TABLE `alumnos`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `casos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `asunto`
+-- AUTO_INCREMENT de la tabla `cita`
 --
-ALTER TABLE `asunto`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `cita`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `status`
+-- AUTO_INCREMENT de la tabla `modo`
 --
-ALTER TABLE `status`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `modo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
