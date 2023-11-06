@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-10-2023 a las 06:35:38
+-- Tiempo de generación: 06-11-2023 a las 22:59:37
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -24,11 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `asesores`
+--
+
+CREATE TABLE `asesores` (
+  `id_asr` int(11) NOT NULL,
+  `asesores` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `asesores`
+--
+
+INSERT INTO `asesores` (`id_asr`, `asesores`) VALUES
+(1, 'Cristina Castillejos');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `casos`
 --
 
 CREATE TABLE `casos` (
-  `id` int(11) NOT NULL,
+  `id_cs` int(11) NOT NULL,
   `caso` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -36,7 +54,7 @@ CREATE TABLE `casos` (
 -- Volcado de datos para la tabla `casos`
 --
 
-INSERT INTO `casos` (`id`, `caso`) VALUES
+INSERT INTO `casos` (`id_cs`, `caso`) VALUES
 (1, 'academico');
 
 -- --------------------------------------------------------
@@ -68,7 +86,7 @@ INSERT INTO `cita` (`id`, `nombrePPS`, `nombreALM`, `caso`, `modalidad`, `horari
 --
 
 CREATE TABLE `modo` (
-  `id` int(11) NOT NULL,
+  `id_md` int(11) NOT NULL,
   `opciones` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -76,28 +94,29 @@ CREATE TABLE `modo` (
 -- Volcado de datos para la tabla `modo`
 --
 
-INSERT INTO `modo` (`id`, `opciones`) VALUES
+INSERT INTO `modo` (`id_md`, `opciones`) VALUES
 (1, 'virtual'),
-(2, 'presencial');
+(2, 'presencial'),
+(3, 'telefonica');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `roles`
+-- Estructura de tabla para la tabla `statuss`
 --
 
-CREATE TABLE `roles` (
-  `id` int(1) NOT NULL,
-  `rol` varchar(30) NOT NULL
+CREATE TABLE `statuss` (
+  `id_sts` int(11) NOT NULL,
+  `statuss` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `roles`
+-- Volcado de datos para la tabla `statuss`
 --
 
-INSERT INTO `roles` (`id`, `rol`) VALUES
-(1, 'administrador'),
-(2, 'usuario');
+INSERT INTO `statuss` (`id_sts`, `statuss`) VALUES
+(1, 'activo'),
+(2, 'inactivo');
 
 -- --------------------------------------------------------
 
@@ -106,7 +125,7 @@ INSERT INTO `roles` (`id`, `rol`) VALUES
 --
 
 CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
+  `id_usr` int(11) NOT NULL,
   `nombre` varchar(80) NOT NULL,
   `correo` varchar(80) NOT NULL,
   `contraseña` varchar(15) NOT NULL,
@@ -117,7 +136,7 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `contraseña`, `rol`) VALUES
+INSERT INTO `usuarios` (`id_usr`, `nombre`, `correo`, `contraseña`, `rol`) VALUES
 (0, 'leonardo', 'hola@hola.com', 'hola1', 1);
 
 --
@@ -125,10 +144,16 @@ INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `contraseña`, `rol`) VALUES
 --
 
 --
+-- Indices de la tabla `asesores`
+--
+ALTER TABLE `asesores`
+  ADD PRIMARY KEY (`id_asr`);
+
+--
 -- Indices de la tabla `casos`
 --
 ALTER TABLE `casos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_cs`);
 
 --
 -- Indices de la tabla `cita`
@@ -140,19 +165,19 @@ ALTER TABLE `cita`
 -- Indices de la tabla `modo`
 --
 ALTER TABLE `modo`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_md`);
 
 --
--- Indices de la tabla `roles`
+-- Indices de la tabla `statuss`
 --
-ALTER TABLE `roles`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `statuss`
+  ADD PRIMARY KEY (`id_sts`);
 
 --
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`id_usr`),
   ADD UNIQUE KEY `correo` (`correo`);
 
 --
@@ -160,10 +185,16 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `asesores`
+--
+ALTER TABLE `asesores`
+  MODIFY `id_asr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `casos`
 --
 ALTER TABLE `casos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `cita`
@@ -175,13 +206,13 @@ ALTER TABLE `cita`
 -- AUTO_INCREMENT de la tabla `modo`
 --
 ALTER TABLE `modo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_md` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `roles`
+-- AUTO_INCREMENT de la tabla `statuss`
 --
-ALTER TABLE `roles`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `statuss`
+  MODIFY `id_sts` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
