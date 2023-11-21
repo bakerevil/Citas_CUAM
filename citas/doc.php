@@ -14,8 +14,10 @@
         <div class="col-12 mb-3">
             <select for="" class="form-control">
                 <option value="#">seleccione una opcion</option>
-                <option value="">asesor1</option>
-                <option value="">cargar db</option>
+                <option value="">Cristina Castillejos</option>
+                <option value="">Juan Jose Arriaga Pérez</option>
+                <option value="">Yuri Sandoval Sáenz</option>
+                <option value="">Russell Holt</option>
             </select>
         </div>
         <div class="mt-4">
@@ -25,4 +27,3 @@
     </form>
 </body>
 </html>
-
