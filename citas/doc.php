@@ -20,7 +20,7 @@
         </div>
         <div class="mt-4">
             <a href="../">back</a>
-            <a href="doc.html" class="btn btn-primary w-100 py-2"> continuar</a>
+            <a href="index.php" class="btn btn-primary w-100 py-2"> continuar</a>
         </div>
     </form>
 </body>
