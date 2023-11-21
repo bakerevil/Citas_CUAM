@@ -14,15 +14,16 @@
         <div class="col-12 mb-3">
             <select for="" class="form-control">
                 <option value="#">seleccione una opcion</option>
-                <option value="">asesor1</option>
-                <option value="">cargar db</option>
+                <option value="">Cristina Castillejos</option>
+                <option value="">Juan Jose Arriaga Pérez</option>
+                <option value="">Yuri Sandoval Sáenz</option>
+                <option value="">Russell Holt</option>
             </select>
         </div>
         <div class="mt-4">
             <a href="../">back</a>
-            <a href="doc.html" class="btn btn-primary w-100 py-2"> continuar</a>
+            <a href="index.php" class="btn btn-primary w-100 py-2"> continuar</a>
         </div>
     </form>
 </body>
 </html>
-
