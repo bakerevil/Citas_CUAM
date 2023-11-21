@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-11-2023 a las 22:59:37
+-- Tiempo de generación: 21-11-2023 a las 19:45:04
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -67,17 +67,23 @@ CREATE TABLE `cita` (
   `id` int(11) NOT NULL,
   `nombrePPS` varchar(255) NOT NULL,
   `nombreALM` varchar(255) NOT NULL,
+  `grado` int(100) NOT NULL,
   `caso` int(1) NOT NULL,
   `modalidad` int(1) NOT NULL,
-  `horarios` datetime NOT NULL
+  `hora` time NOT NULL,
+  `dia` varchar(20) NOT NULL,
+  `asunto` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `cita`
 --
 
-INSERT INTO `cita` (`id`, `nombrePPS`, `nombreALM`, `caso`, `modalidad`, `horarios`) VALUES
-(1, 'juan aguirre mendoza', 'chalino sanchez sanchez', 1, 2, '2023-10-06 13:30:00');
+INSERT INTO `cita` (`id`, `nombrePPS`, `nombreALM`, `grado`, `caso`, `modalidad`, `hora`, `dia`, `asunto`) VALUES
+(1, 'juan aguirre mendoza', 'chalino sanchez sanchez', 0, 1, 2, '13:30:00', '19 de octubre', 'blabkabala'),
+(2, 'andrik', 'asas', 21, 12, 21, '01:22:11', '121', 'sadDS'),
+(3, 'awsef', 'feaw', 12, 2121, 212, '00:00:12', '21', 'adsff'),
+(4, 'andrik adrian', 'smith', 401, 0, 0, '09:00:00', '19 de octubre', 'mi hijo va mal en la escuela');
 
 -- --------------------------------------------------------
 
@@ -200,7 +206,7 @@ ALTER TABLE `casos`
 -- AUTO_INCREMENT de la tabla `cita`
 --
 ALTER TABLE `cita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `modo`

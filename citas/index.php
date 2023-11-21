@@ -6,16 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles_citas.css">
     <title>Citas Cuam</title>
 
 </head>
 
-<body class="bg-dark d-flex justify-content-center align-items-center" style="height: 100vh">
-    <div class="container bg-white rounded shadow p-4 col-xl-4 col-lg-6">
-        <h2 class="w-100 text-center mb-4">Citas Cuam</h2>
-        <hr style="color: #9999" />
+<body class="">
+    <div class="container">
+        <h2 class="text-center mb-4">Citas Cuam</h2>
+        <hr>
         <form id="formulario" method="POST">
-            <div class="mb-3">
+            <div class="mt-5 mb-3">
                 <label for="txt_nombrePPS" class="form-label">Nombre del Padre</label>
                 <input type="text" class="form-control" id="txt_nombrePPS" name="txt_nombrePPS" placeholder="ingrese su nombre" required="">
             </div>
@@ -60,7 +61,7 @@
             </div>
             <div class="mb-3">
                 <label for="txt_hora" class="form-label">horarios</label>
-                <select type="time" class="form-control" id="txt_hora" name="txt_hora" placeholder="hora" required="">
+                <select type="time" class="form-control" id="txt_hora" name="txt_hora" required="">
                     <option value="#">seleccione su opcion</option>
                     <option value="7:30">7:30</option>
                     <option value="8:00">8:00</option>
@@ -72,7 +73,7 @@
             </div>
             <div class="mb-3">
                 <label for="txt_dia" class="form-label">dia</label>
-                <input type="date" class="form-control" id="txt_dia" name="txt_dia" placeholder="dia" required="">
+                <input type="date" class="form-control" id="txt_dia" name="txt_dia" required="">
             </div>
             <div class="mb-3">
                 <label for="txt_asunto" class="form-label">detalles</label>
@@ -80,8 +81,8 @@
             </div>
             <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
             <div>
-              <a href="correo.php">confirmar cita por correo</a>
-              <a href="whatsapp.php">confirmar cita por whatsapp</a>
+                <a href="correo.php">confirmar cita por correo</a> <br>
+                <a href="whatsapp.php">confirmar cita por whatsapp</a>
             </div>
         </form>
     </div>

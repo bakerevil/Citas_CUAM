@@ -3,15 +3,16 @@
 *{
     padding: 0;
     margin: 0;
-    background: rgb(235, 234, 234);
     font-style: italic 100;
 }
-.text-center{
-    background: rgb(235, 234, 234);
+
+body{
+    background-color: gray;
 }
-#container{
-    width: 50%;
-    height: 50%;
-    margin-top: 15%;
-    margin-left: 23%;
+.container{
+    background: rgb(235, 234, 234);
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 1%;
 }
