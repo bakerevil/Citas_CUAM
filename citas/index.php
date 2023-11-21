@@ -58,6 +58,12 @@
            
 
             <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
+            <div>
+            <a href="correo.php">confirmar cita por correo</a>
+            </div>
+            
+            <a href="whatsapp.php">confirmar cita por whatsapp</a>
+            
 
         </form>
 
