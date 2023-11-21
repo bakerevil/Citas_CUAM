@@ -79,6 +79,10 @@
                 <input type="text" class="form-control" id="txt_asunto" name="txt_asunto" placeholder="explique su situacion" required="">
             </div>
             <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
+            <div>
+              <a href="correo.php">confirmar cita por correo</a>
+              <a href="whatsapp.php">confirmar cita por whatsapp</a>
+            </div>
         </form>
     </div>
     <script src="app.js"></script>
