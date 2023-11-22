@@ -122,3 +122,51 @@ ul.slider li:target {
     font-size: 20px;
     border-radius: 100%;
 }
+.cont{
+    margin-top: 3%;
+    margin-left: 3%;
+    
+}
+.container{
+    display: flex;
+}
+.cont h6{
+    display: flex;
+    max-width: 380px;
+    margin-left: 13px;
+    margin-top: 314px;
+    color: white;
+    position: absolute;
+}
+.cont img{
+    max-width: 408px;
+    max-height: 470px;
+}
+.somos{
+    margin: 20px;
+    max-width: 302px;
+    padding-left: 7%;
+}
+.ult{
+    padding-left: 10%;
+}
+.ult img{
+    padding-top: 25px;
+    max-width: 200px;
+}
+.ult h3{
+    display: flex;
+    position: absolute;
+    color: white;
+    max-width: 200px;
+    margin-top: 180px;
+    margin-left: 8px;
+}
+.ult h5{
+    display: flex;
+    position: absolute;
+    color: rgb(204, 202, 202);
+    max-width: 200px;
+    margin-top: 170px;
+    margin-left: 15px;
+}
