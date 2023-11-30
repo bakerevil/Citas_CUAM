@@ -9,10 +9,10 @@
 </head>
 <body>
     <form id="container">
-        <h2 class=" mb-3 fw-normal">con que asesor gusta contactar?</h2>
+        <h2 class=" mb-3 fw-normal">Que asesor gusta contactar?</h2>
         <div class="col-12 mb-3">
             <select for="" class="form-control">
-                <option value="#">seleccione una opcion</option>
+                <option value="#">Seleccione una opción</option>
                 <option value="">Cristina Castillejos</option>
                 <option value="">Juan Jose Arriaga Pérez</option>
                 <option value="">Yuri Sandoval Sáenz</option>
@@ -20,8 +20,8 @@
             </select>
         </div>
         <div class="mt-4">
-            <a href="../">back</a>
-            <a href="index.php" class="btn btn-primary w-100 py-2"> continuar</a>
+            <a href="../">Back</a>
+            <a href="index.php" class="btn btn-primary w-100 py-2">Continuar</a>
         </div>
     </form>
 </body>

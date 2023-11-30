@@ -17,7 +17,7 @@
         <hr>
         <form id="formulario" method="POST">
             <div class="mt-5 mb-3">
-                <label for="txt_nombrePPS" class="form-label">Nombre del Padre</label>
+                <label for="txt_nombrePPS" class="form-label">Nombre del padre</label>
                 <input type="text" class="form-control" id="txt_nombrePPS" name="txt_nombrePPS" placeholder="ingrese su nombre" required="">
             </div>
             <div class="mb-3">
@@ -25,9 +25,9 @@
                 <input type="text" class="form-control" id="txt_nombreALM" name="txt_nombreALM" placeholder="ej. García Martinez Leonardo" required="">
             </div>
             <div class="mb-3">
-                <label for="txt_grado" class="form-label">grado</label>
+                <label for="txt_grado" class="form-label">Grado</label>
                 <select type="text" class="form-control" id="txt_grado" name="txt_grado" placeholder="Ingrese el grado estudiantil" required="">
-                    <option value="#">seleccione su opcion</option>
+                    <option value="#">Seleccione su opción</option>
                     <option value="">401</option>
                     <option value="">402</option>
                     <option value="">403</option>
@@ -41,28 +41,28 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="txt_caso" class="form-label">caso</label>
+                <label for="txt_caso" class="form-label">Caso</label>
                 <select type="text" class="form-control" id="txt_caso" name="txt_caso" placeholder="caso" required="">
-                    <option value="#">seleccione su opcion</option>
-                    <option value="1">academico</option>
-                    <option value="2">conductual</option>
-                    <option value="3">psicologico</option>
+                    <option value="#">Seleccione su opción</option>
+                    <option value="1">Academico</option>
+                    <option value="2">Conductual</option>
+                    <option value="3">Psicologico</option>
                 </select>
             </div>
 
             <div class="mb-3">
-                <label for="txt_modalidad" class="form-label">modalidad</label>
+                <label for="txt_modalidad" class="form-label">Modalidad</label>
                 <select type="text" class="form-control" id="txt_modalidad" name="txt_modalidad" placeholder="modalidad" required="">
-                    <option value="#">seleccione su opcion</option>
-                    <option value="1">videollamada</option>
-                    <option value="2">presencial</option>
-                    <option value="3">telefonica</option>
+                    <option value="#">Seleccione su opción</option>
+                    <option value="1">Videollamada</option>
+                    <option value="2">Presencial</option>
+                    <option value="3">Telefonica</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="txt_hora" class="form-label">horarios</label>
+                <label for="txt_hora" class="form-label">Horarios</label>
                 <select type="time" class="form-control" id="txt_hora" name="txt_hora" required="">
-                    <option value="#">seleccione su opcion</option>
+                    <option value="#">Seleccione su opción</option>
                     <option value="7:30">7:30</option>
                     <option value="8:00">8:00</option>
                     <option value="8:30">8:30</option>
@@ -72,17 +72,17 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="txt_dia" class="form-label">dia</label>
+                <label for="txt_dia" class="form-label">Dia</label>
                 <input type="date" class="form-control" id="txt_dia" name="txt_dia" required="">
             </div>
             <div class="mb-3">
-                <label for="txt_asunto" class="form-label">detalles</label>
+                <label for="txt_asunto" class="form-label">Detalles</label>
                 <input type="text" class="form-control" id="txt_asunto" name="txt_asunto" placeholder="explique su situacion" required="">
             </div>
             <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
             <div>
-                <a href="correo.php">confirmar cita por correo</a> <br>
-                <a href="whatsapp.php">confirmar cita por whatsapp</a>
+                <a href="correo.php">Confirmar cita por correo</a> <br>
+                <a href="whatsapp.php">Confirmar cita por whatsapp</a>
             </div>
         </form>
     </div>
