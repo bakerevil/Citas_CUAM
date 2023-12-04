@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles_citas.css">
-    <title>Citas Cuam</title>
+    <title>Citas CUAM</title>
 
 </head>
 
 <body class="">
     <div class="container">
-        <h2 class="text-center mb-4">Citas Cuam</h2>
+        <h2 class="text-center mb-4">Citas CUAM</h2>
         <hr>
         <form id="formulario" method="POST">
             <div class="mt-5 mb-3">
@@ -72,17 +72,17 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="txt_dia" class="form-label">Dia</label>
+                <label for="txt_dia" class="form-label">Día</label>
                 <input type="date" class="form-control" id="txt_dia" name="txt_dia" required="">
             </div>
             <div class="mb-3">
                 <label for="txt_asunto" class="form-label">Detalles</label>
                 <input type="text" class="form-control" id="txt_asunto" name="txt_asunto" placeholder="explique su situacion" required="">
             </div>
-            <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
+            <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Reservar</button>
             <div>
-                <a href="correo.php">Confirmar cita por correo</a> <br>
-                <a href="whatsapp.php">Confirmar cita por whatsapp</a>
+                <a href="correo.php">Confirmación cita por correo</a> <br>
+                <a href="whatsapp.php">Confirmación cita por whatsapp</a>
             </div>
         </form>
     </div>

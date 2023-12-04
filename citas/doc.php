@@ -9,7 +9,7 @@
 </head>
 <body>
     <form id="container">
-        <h2 class=" mb-3 fw-normal">Que asesor gusta contactar?</h2>
+        <h2 class=" mb-3 fw-normal">Con cual asesor gusta contactar?</h2>
         <div class="col-12 mb-3">
             <select for="" class="form-control">
                 <option value="#">Seleccione una opción</option>
